@@ -47,7 +47,7 @@ def contestant_choose_door():
 def show_host_choose_door(): 
     global contestant_door
     for door_number in range(total_doors_c):
-        if door_number != contestant_choose_door and doors[door_number]==0: # if it's not the door the contestant chose and the car is not behind it, choose it
+        if door_number != contestant_door and doors[door_number]==0: # if it's not the door the contestant chose and the car is not behind it, choose it
             return door_number
     
 
@@ -56,7 +56,7 @@ def contestant_change_door():
     global contestant_door
     global show_host_door
     for door_number in range(total_doors_c):
-        if door_number != contestant_choose_door and door_number != show_host_door: #pick a door that's not the door initial selected and not the show host door that does not contain the prize
+        if door_number != contestant_door and door_number != show_host_door: #pick a door that's not the door initial selected and not the show host door that does not contain the prize
             return door_number            
 
 
